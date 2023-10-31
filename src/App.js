@@ -1,21 +1,23 @@
-import React from 'react';
-import Navbar from './components/navbar/navbar';
-import './App.css';
-import HeroSection from './components/hero/hero';
-import FacilitiesSection from './components/cards/cards';
-import TestimonialsSection from './components/testimonials/testomonials';
-import FooterPage from './components/footer/footer';
-import { Homepage } from './pages/Homepage/homepage';
-import About from './pages/About/About';
+import React from "react";
+import Navbar from "./components/navbar/navbar";
 
-function App() {
+import FooterPage from "./components/footer/footer";
+import { Homepage } from "./pages/Homepage/homepage";
+import About from "./pages/About/About";
+import { Route, Routes } from "react-router-dom";
+
+function userRouter() {
   return (
     <div>
-    <Navbar />
-    <About/>
-    <FooterPage/>
-  </div>
+      <Navbar></Navbar>
+
+      <Routes>
+        <Route path="/about" Component={About}></Route>
+        <Route path="/" Component={Homepage}></Route>
+      </Routes>
+      <FooterPage></FooterPage>
+    </div>
   );
 }
 
-export default App;
+export default userRouter;

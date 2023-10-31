@@ -5,7 +5,7 @@ import TestimonialsSection from '../../components/testimonials/testomonials'
 
 export const Homepage = () => {
   return (
-    <div>
+    <div >
     <HeroSection/>
     <FacilitiesSection/>
     <TestimonialsSection/>
